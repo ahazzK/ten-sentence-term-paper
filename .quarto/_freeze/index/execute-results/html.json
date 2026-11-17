@@ -1,0 +1,12 @@
+{
+  "hash": "6edb323bba9d89c412e25e3180c1fe90",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Ten Sentence Term Paper\"\nexecute:\n  echo: true\n---\n\n# Introduction\n\n::: {#bce06e38 .cell execution_count=1}\n``` {.python .cell-code}\nimport pandas as pd\nimport numpy as np\n\nimport seaborn as sns\ndf = sns.load_dataset('iris')\n```\n:::\n\n\nResearchers are UW-Madison staked out to understand how irises may or may not behave in the wild. As such they took to the streets of many old ladies and stole flowers as none of the required specimen were present on university grounds, our research question it so study whether the petal width correlates with petal length.\n\n# Literature Review\n\nPrevious literature has brought up time and time again that petal lengths and petal widths are strongly correlated, almost as if the relationship has to be linearly related. Science takes nothing for granted, so we must test this hypothesis to make sure of this.\n\n# Method\n\nWe have two columns of continuous data (length of petal and width of petal measured in millimeters). We will evaluate this relationship using simple correlation analysis and also a scatterplot, these two methods are classic and traditional starting points when evaluating data like these.\n\n# Results\n\n::: {#0aeb506a .cell execution_count=2}\n``` {.python .cell-code}\ncorr_val = np.array(df[['petal_length', 'petal_width']].corr())[0][1]\n\nprint(corr_val)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n0.962865431402796\n```\n:::\n:::\n\n\nUsing the class simple Pearson correlation approach these data produce a reliable correlation coefficient of 0\\.962865431402796, resulting in a very strong positive correlation.\n\n# Discussion\n\nThe results of our analysis further support the existing framework that petal length is strongly positively associated with petal width. However as researchers we must continue to investigate this relationship in order to truly ascertain the axiom that these two parts of the flower bloom into a truthful conclusion.\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

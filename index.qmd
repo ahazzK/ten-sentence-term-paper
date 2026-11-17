@@ -1,0 +1,38 @@
+---
+title: "Ten Sentence Term Paper"
+execute:
+  echo: true
+---
+
+# Introduction
+
+```{python}
+import pandas as pd
+import numpy as np
+
+import seaborn as sns
+df = sns.load_dataset('iris')
+```
+Researchers are UW-Madison staked out to understand how irises may or may not behave in the wild. As such they took to the streets of many old ladies and stole flowers as none of the required specimen were present on university grounds, our research question it so study whether the petal width correlates with petal length.
+
+# Literature Review
+
+Previous literature has brought up time and time again that petal lengths and petal widths are strongly correlated, almost as if the relationship has to be linearly related. Science takes nothing for granted, so we must test this hypothesis to make sure of this.
+
+# Method
+
+We have two columns of continuous data (length of petal and width of petal measured in millimeters). We will evaluate this relationship using simple correlation analysis and also a scatterplot, these two methods are classic and traditional starting points when evaluating data like these.
+
+# Results
+
+
+```{python}
+corr_val = np.array(df[['petal_length', 'petal_width']].corr())[0][1]
+
+print(corr_val)
+```
+Using the class simple Pearson correlation approach these data produce a reliable correlation coefficient of `{python} f"{corr_val}"`, resulting in a very strong positive correlation.
+
+# Discussion
+
+The results of our analysis further support the existing framework that petal length is strongly positively associated with petal width. However as researchers we must continue to investigate this relationship in order to truly ascertain the axiom that these two parts of the flower bloom into a truthful conclusion.
